@@ -1,7 +1,22 @@
-#include<stdio.h>
-main()
+#include <stdio.h>
+int factorial(int num)
 {
-int x=4, y=10, z=10;
-x=y==z;
-printf("%d",x);
+    int fact = 1;
+    while (num != 0)
+    {
+        fact = fact * num;
+        num--;
+    }
+    return fact;
+}
+int main()
+{
+    intnum, fact;
+
+    printf("Enter a positive integer number: ");
+    scanf("%d", &num);
+
+    fact = factorial(num);
+    printf("Factorial of %d is: %d", num, fact);
+    return 0;
 }
